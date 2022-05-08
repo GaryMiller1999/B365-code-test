@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: b365test
+  name: b365test-svc
+  namespace: default
+  resourceVersion: "2357"
+  uid: c6e35c92-054f-49db-9e02-948fc91eca37
+spec:
+  clusterIP: 10.96.95.90
+  clusterIPs:
+  - 10.96.95.90
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32156
+    port: 80
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: b365test
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
