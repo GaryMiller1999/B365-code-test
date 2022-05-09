@@ -9,7 +9,7 @@ container based solutions easier to integrate.
 
 For a basic docker setup
 ```
-docker run -d -p 5000:5000 GARYMILLERWORK/B365TEST-FLASK
+docker run -d -p 5000:5000 garymillerwork/b365test-flask:latest
 ```
 
 navigate to 127.0.0.1:5000/checkip?ips=**your IPs comma seperated**
